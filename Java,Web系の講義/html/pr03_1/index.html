@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8" />
+<title>HTML5の練習ページ</title>
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+<!-- 3 JavaScript関数の練習　開始 -->
+<script>
+function jijou(a) { // 関数の定義はfunction，aは引数
+if (document.getElementById) {
+// getElementByIDが使えるかどうか確認（古いブラウザは使えない）
+var js = document.getElementById("js"); // id="js"のHTMLタグをオブジェクトjsへ代入
+if (Math.pow(a, 2) < 200000) { // 同様にswitch,for,while等も利用可
+js.innerText = Math.pow(a, 2); // Math.pow 2乗の解
+} else {
+js.innerHTML = "<b>値が大きいです</b>";
+// innerTextは文字のみ，innerHTMLはタグを含む場合
+}
+}
+}
+</script>
+<!-- JavaScript関数の練習　終了 -->
+</head>
+
+<body>
+<!? 1 JavaScriptメッセージ練習　開始 -->
+<script>
+var hensu1 = 10; /* varは変数宣言,配列の場合は「var hensu1 = new array」と定義する */
+var hensu2 = 5; /* javaScriptは整数・実数などの型はない */
+alert("ようこそ！ \n JavaScriptのテストです;");
+/* alertはメッセージを表示、「"」は文字列を意味 */
+/* \nは改行を意味 */
+alert(hensu1 + hensu2); /* 「"」を取ると数値などの計算結果を表示 */
+</script>
+<!-- JavaScriptメッセージ練習　終了 -->
+<div id="wrap">
+<header id="head"><h1>HTML5の練習ホームページ</h1></header>
+
+<nav id="navi">
+<ul>
+<li><a href="./index.html">ホーム</a></li>
+<li><a href="./hobby.html">趣味</a></li>
+</ul>
+</nav>
+
+<article class="post">
+<h2>記事のサンプルタイトル１</h2>
+<p>html5の構造化タグを使った練習をしています。ここが記事１になります。</p>
+
+<!-- 2 JavaScriptの表示練習　開始 -->
+<script>
+document.write("<p>JavaScriptの練習です！</p>"); /* HTMLに直接書き込む */
+</script>
+<noscript>
+<p>JavaScriptがOFFになっています。</p> <!-- JavaScriptがOffの場合の処理 -->
+</noscript>
+<!-- JavaScriptサンプル　終了 -->
+
+<!-- 3 JavaScript関数の練習　開始 -->
+<form>
+<input type="button" value="333の2乗は" onclick="jijou(333);"> <br />
+<input type="button" value="555の2乗は" onclick="jijou(555);">
+</form>
+<!-- JavaScript関数の練習　終了 -->
+</article>
+
+<article class="post">
+<h2>記事のサンプルタイトル２</h2>
+<!-- 3 JavaScript関数の練習　追記開始 -->
+<p id="js">ここが記事２になります。</p>
+<!-- 3 JavaScript関数の練習　追記終了 -->
+</article>
+
+<footer id="foot"><a href="./index.html">HTML5の練習ページ</a>　Copyrightcsugawaralab2014 </footer>
+</div>
+</body>
+
+</html>

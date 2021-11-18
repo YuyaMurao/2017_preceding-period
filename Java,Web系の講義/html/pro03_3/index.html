@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8" />
+<title>Google Maps API サンプル</title>
+
+<!-- Google Maps APIを読み込む -->
+<!-- GppgleMap APIキー -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCum_9V4uwOC2mP5Hh4YM6_RYUO2a7cRTY" type="text/javascript"></script>
+<!-- 終了 -->
+<!-- 地図を表示するためのスクリプトの読み込み -->
+<script src="./map.js" type="text/javascript"></script>
+<!-- 終了 -->
+</head>
+
+<body onload="initialize();"> <!-- HTMLを読み込んだとき地図を表示 -->
+
+<article>
+<p>岩手県立大学の地図です。</p>
+<!-- 手順4 マーカーの経度緯度の取得 追加開始 -->
+<form>
+<label for="latitude">緯度</label><input type="text" id="latitude" size="20" />
+<label for="longitude">経度</label><input type="text" id="longitude" size="20" />
+</form>
+<!-- 演習4 マーカーの経度緯度の取得 追加終了 -->
+
+<!-- 地図を表示するエリアをdiv要素を使って指定 -->
+<div id="map_canvas" style="width:500px; height:300px"></div>
+</article>
+
+</body>
+</html>

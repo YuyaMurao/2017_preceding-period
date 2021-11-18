@@ -1,0 +1,41 @@
+@charset "UTF-8";
+body{
+text-align:center;
+}
+
+#wrap{
+width:500px;
+margin:0 auto;
+text-align:left;
+border:solid 1px #333;
+}
+
+#wrap2{
+width:1000px;
+margin:0 auto;
+text-align:left;
+border:solid 1px #333;
+}
+
+#head {
+padding:10px;
+border-bottom:solid 1px #333;
+}
+
+#navi {
+border-bottom:solid 1px #333;
+}
+.post {
+padding:10px;
+}
+
+#foot {
+border-top:solid 1px #333;
+text-align:center;
+padding:10px;
+}
+
+.source{
+color:#ff3333;
+border-bottom:solid 1px #333;
+}
